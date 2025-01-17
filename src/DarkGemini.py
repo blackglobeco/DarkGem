@@ -47,7 +47,7 @@ class Jarvis:
         Returns:
             Tuple[str, bool]: (response/error message, should_continue flag)
         """
-        print("\nListening...")
+        print("\nDark Gemini Listening...")
         question = await LibVoice.listen()
         
         if not question:
@@ -58,7 +58,7 @@ class Jarvis:
             return "", False
             
         response = await self.chat_manager.ask_gemini_ai(question)
-        print(f"\nJarvis: {response}\n")
+        print(f"\nJDark Gemini: {response}\n")
         await LibVoice.say(response)
         return response, True
 
@@ -78,7 +78,7 @@ class Jarvis:
             return "", False
             
         response = await self.chat_manager.ask_gemini_ai(question)
-        print(f"\nJarvis: {response}\n")
+        print(f"\nDark Gemini: {response}\n")
         return response, True
 
     async def _run_interaction_loop(self, mode: int) -> None:
@@ -105,7 +105,7 @@ class Jarvis:
                 break
 
     async def run_jarvis(self) -> None:
-        """Main execution method for running the Jarvis AI system."""
+        """Main execution method for running the Dark Gemini AI system."""
         self._display_welcome_message()
         
         mode = self._get_mode_selection()
