@@ -8,7 +8,7 @@ class ConfigManager:
     """
 
     CONFIG_FILE_PATH = "config.yml"
-    DEFAULT_GEMINI_MODEL_ID = "gemini-pro"
+    DEFAULT_GEMINI_MODEL_ID = "gemini-1.5-flash"
 
     @staticmethod
     def load_config() -> Optional[Dict[str, Any]]:
