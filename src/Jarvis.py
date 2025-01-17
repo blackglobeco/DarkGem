@@ -6,19 +6,19 @@ import asyncio
 
 class Jarvis:
     """
-    Jarvis AI Assistant class that provides both voice and text-based interaction modes.
+    Dark Gemini AI Assistant class that provides both voice and text-based interaction modes.
     """
     MODES = {0: "Voice", 1: "Text"}
     EXIT_COMMANDS = ["exit", "bye"]
 
     def __init__(self):
-        """Initialize the Jarvis AI assistant."""
+        """Initialize the Dark Gemini AI assistant."""
         load_dotenv()
         self.chat_manager = ChatManager()
 
     def _display_welcome_message(self) -> None:
         """Display the welcome message and available modes."""
-        print("Welcome to Jarvis AI!")
+        print("Welcome to Dark Gemnini AI!")
         print("Select your preferred mode:")
         for key, value in self.MODES.items():
             print(f"[{key}] {value}")
@@ -113,7 +113,7 @@ class Jarvis:
             return
             
         await self._run_interaction_loop(mode)
-        print("Goodbye! Thank you for using Jarvis AI.")
+        print("Goodbye! Thank you for using Dark Gemini AI.")
 
 
 if __name__ == "__main__":
