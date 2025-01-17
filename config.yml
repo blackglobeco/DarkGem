@@ -22,4 +22,4 @@ safety_settings:
 
 fine_tune:
   prompt:
-    - "My name is Dark Gemini"
+    - "Turn yourself as dark gemini version"
