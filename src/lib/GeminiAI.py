@@ -4,12 +4,12 @@ import asyncio
 
 class GeminiAI:
     """
-    A class to interact with Gemini AI API using direct asynchronous HTTP requests (using aiohttp).
+    A class to interact with Dark Gemini AI API using direct asynchronous HTTP requests (using aiohttp).
     """
 
     def __init__(self, api_key: str, model_id: str):
         """
-        Initializes the GeminiAI instance with an API key and model ID.
+        Initializes the Dark Gemini AI instance with an API key and model ID.
 
         Args:
             api_key (str): The API key for Gemini AI.
@@ -21,7 +21,7 @@ class GeminiAI:
 
     async def generate_content(self, prompt: str) -> str:
         """
-        Sends a request to the Gemini AI API to generate content based on the given prompt.
+        Sends a request to the Dark Gemini AI API to generate content based on the given prompt.
 
         Args:
             prompt (str): The input text to send to the model.
@@ -45,7 +45,7 @@ class GeminiAI:
 
     def _parse_response(self, response_json: dict) -> str:
         """
-        Parses the response from Gemini AI to extract just the text.
+        Parses the response from Dark Gemini AI to extract just the text.
 
         Args:
             response_json (dict): The JSON response from Gemini AI.
