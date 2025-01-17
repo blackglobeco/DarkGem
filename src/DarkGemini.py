@@ -58,7 +58,7 @@ class Jarvis:
             return "", False
             
         response = await self.chat_manager.ask_gemini_ai(question)
-        print(f"\nJDark Gemini: {response}\n")
+        print(f"\nDark Gemini: {response}\n")
         await LibVoice.say(response)
         return response, True
 
