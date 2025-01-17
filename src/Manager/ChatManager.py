@@ -5,7 +5,7 @@ import asyncio
 
 class ChatManager:
     """
-    Manages chat sessions with Gemini AI.
+    Manages chat sessions with Dark Gemini AI.
     Handles fine-tuning prompts, sending messages, and managing session state.
     """
 
@@ -26,7 +26,7 @@ class ChatManager:
         # print(f"Using API Key: {self.api_key}")
         self.model_id = ConfigManager.get_gemini_model_id()
         if not self.api_key:
-            raise ValueError("Gemini AI API key not found in configuration.")
+            raise ValueError("Dark Gemini AI API key not found in configuration.")
 
         self.genai = GeminiAI(api_key=self.api_key, model_id=self.model_id)
 
@@ -35,7 +35,7 @@ class ChatManager:
 
     async def ask_gemini_ai(self, prompt: str) -> str:
         """
-        Sends a prompt to Gemini AI and retrieves the response asynchronously.
+        Sends a prompt to Dark Gemini AI and retrieves the response asynchronously.
 
         Args:
             prompt (str): The prompt text to send to the model.
@@ -49,7 +49,7 @@ class ChatManager:
             response = await self.genai.generate_content(prompt)
             return response
         except Exception as e:
-            return f"Error while communicating with Gemini AI: {e}"
+            return f"Error while communicating with Dark Gemini AI: {e}"
 
     async def _apply_finetuning(self):
         """
